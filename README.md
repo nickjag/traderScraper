@@ -1,2 +1,2 @@
-# traderScraper
-A node.js scraper for autotrader.com that tracks and displays car price trends. 
+# traderWatch
+A node.js web app that tracks and displays price trends of a car.
