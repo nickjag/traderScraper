@@ -1,12 +1,12 @@
 # traderWatch
 A node.js web app that tracks and displays price trends of a car.
 
-#### About
+## About
 The app takes a single search results URL from AutoTrader.com and tracks the average price and sales length of the vehicle you're interested in. 
 
 It uses MongoDB to store the data it obtains weekly. 
 
-#### Initial Setup
+## Initial Setup
 
 **MongoDB**
 
@@ -29,7 +29,7 @@ The app will automatically create the db collections needed.
 
 Optionally modify the /includes/settings.js file to your needs.
 
-### Getting Started
+## Getting Started
 
 Once you're set up, you'll need to add data using the app.
 
@@ -55,13 +55,13 @@ Return to the app's index page and you can initially begin manually scraping the
 
 It also will move any missing vehicles to the sold collection.
 
-### Notes
+## Demo
 
 A demo of the app can be viewed here on RedHat OpenShift: 
 
 [https://nickjag-traderwatch.rhcloud.com/](https://nickjag-traderwatch.rhcloud.com/)
 
-### Notes
+## Notes
 
 **Dummy Data**
 
@@ -75,9 +75,9 @@ Plans for the future include:
 -Add the number of listings used for each snapshot.
 -Add the capability for multiple search URLs.
 
-### Author
+## Author
 
 [Nick Jagodzinski](http://nickjag.com)
 
-### Licensing
+## Licensing
 ramenRouter is available under the MIT license.
