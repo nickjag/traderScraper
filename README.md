@@ -16,11 +16,11 @@ Create a database. Currently, server.js uses traderdb as the database name.
 
 Modify the server.js file with your:
 
-	-MongoDB connection
-	-Port
-	-Domain
-	-Timezone
-	
+- MongoDB connection
+- Port
+- Domain
+- Timezone
+
 You can optionally modify the two schedulers if you prefer the app to collect more or less often.
 
 The app will automatically create the db collections needed.
@@ -29,7 +29,7 @@ The app will automatically create the db collections needed.
 
 Optionally modify the /includes/settings.js file to your needs.
 
-#### Getting Started
+### Getting Started
 
 Once you're set up, you'll need to add data using the app.
 
@@ -55,11 +55,17 @@ Return to the app's index page and you can initially begin manually scraping the
 
 It also will move any missing vehicles to the sold collection.
 
-#### Notes
+### Notes
+
+A demo of the app can be viewed here on RedHat OpenShift: 
+
+[https://nickjag-traderwatch.rhcloud.com/](https://nickjag-traderwatch.rhcloud.com/)
+
+### Notes
 
 **Dummy Data**
 
-Inside the /views/index.handlebars file, you can un-comment the dummy data to view the chart as it will function once more data populates over time.
+Inside the ```/views/index.handlebars``` file, you can un-comment the dummy data to view the chart as it will function once more data populates over time.
 
 **Futher Enhancements**
 
@@ -69,9 +75,9 @@ Plans for the future include:
 -Add the number of listings used for each snapshot.
 -Add the capability for multiple search URLs.
 
-#### Author
+### Author
 
 [Nick Jagodzinski](http://nickjag.com)
 
-#### Licensing
+### Licensing
 ramenRouter is available under the MIT license.
