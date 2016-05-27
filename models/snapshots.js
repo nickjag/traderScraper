@@ -10,7 +10,7 @@ module.exports = (function(req,res) {
 	
 	this.getSnapshots = function(callback) {
 		
-		self.tsSnapshots.find({},{sort:{date_taken:-1},limit:this.period},function(e,docs){
+		self.tsSnapshots.find({},{sort:{date_taken:1},limit:this.period},function(e,docs){
 			self.snapshots = docs;
 			callback();
 		});

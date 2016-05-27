@@ -115,6 +115,7 @@ module.exports = {
 	},
 	formatMoney: function(amt) {
 		
+		amt = parseFloat(amt);
 		var formattedAmt = '$' + amt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 		return formattedAmt;
 	},
