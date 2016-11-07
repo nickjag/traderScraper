@@ -7,6 +7,7 @@ var path = require('path'),
 module.exports = (function(req,res) {
 	
 	var self = this;
+	this.period = null;
 	this.search = null;
 	this.snapshots = null;
 	this.currAvgPrice = null;
@@ -16,10 +17,7 @@ module.exports = (function(req,res) {
 	this.soldValues = null;
 	this.emptyData = false;
 	
-	this.output = {
-		periodClassShort: 'primary',
-		periodClassMax: 'default',
-	};
+	this.output = {};
 	
 	var snapshotsModel = require('../models/snapshots.js')(req,res);
 	var searchModel = require('../models/search.js')(req,res);
@@ -65,9 +63,14 @@ module.exports = (function(req,res) {
 			// Check for period
 			
 			if (query.period !== undefined && query.period == 'max') {
-				settings.period = settings.maxPeriod;
+				self.period = settings.maxPeriod;
 				self.output.periodClassShort = 'default';
 				self.output.periodClassMax = 'primary';
+			}
+			else {
+				self.period = settings.shortPeriod;
+				self.output.periodClassShort = 'primary';
+				self.output.periodClassMax = 'default';
 			}
 			
 			// Future Settings
@@ -100,7 +103,7 @@ module.exports = (function(req,res) {
 				
 				self.snapshots = snapshotsModel.snapshots;
 				dataSelf.getDataSold(callback);
-			});
+			}, self.period);
 		}
 		
 		// Get Sold

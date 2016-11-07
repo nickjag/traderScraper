@@ -5,12 +5,11 @@ module.exports = (function(req,res) {
 	
 	var self = this;
 	this.snapshots = null;
-	this.period = settings.period;
 	this.tsSnapshots = req.db.get('snapshots');
 	
-	this.getSnapshots = function(callback) {
+	this.getSnapshots = function(callback, period) {
 		
-		self.tsSnapshots.find({},{sort:{date_taken:1},limit:this.period},function(e,docs){
+		self.tsSnapshots.find({},{sort:{date_taken:1},limit:period},function(e,docs){
 			self.snapshots = docs;
 			callback();
 		});

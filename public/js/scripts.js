@@ -25,6 +25,8 @@ $('#update-url').on('click', function() {
 });
 
 function formatMoney(amt) {
+	
+	amt = parseFloat(amt);
 	formattedAmt = '$' + amt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 	return formattedAmt;
 }
